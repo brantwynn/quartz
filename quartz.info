@@ -1,0 +1,12 @@
+name = Quartz
+description = Ubiquitous.
+core = 7.x
+distribution_name = Quartz
+exclusive = 1
+
+dependencies[] = block
+dependencies[] = user
+
+; System Requirements
+php = 5.3
+php_memory_limit = 128M
