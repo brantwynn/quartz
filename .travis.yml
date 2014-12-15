@@ -22,7 +22,7 @@ install:
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 - git clone --branch 8.x-1.x http://git.drupal.org/project/composer.git ~/.drush/composer
 - cd ..
-- drush make --concurrency=5 drupal-org-core.make drupal -y
+- drush make --concurrency=5 quartz/drupal-org-core.make drupal -y
 - mkdir drupal/profiles/quartz
 - cp -R quartz/* drupal/profiles/quartz/.
 - cd drupal
