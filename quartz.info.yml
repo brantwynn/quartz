@@ -1,0 +1,21 @@
+name: Quartz
+type: profile
+description: 'Ubiquitious.'
+version: VERSION
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - config
+  - contextual
+  - field_ui
+  - file
+  - help
+  - image
+  - options
+  - path
+  - toolbar
+  - user
+themes:
+  - bartik
+  - seven

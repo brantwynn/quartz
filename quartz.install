@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profile.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function quartz_install() {
+  // Now that all modules are installed, make sure the entity storage and other
+  // handlers are up to date with the current entity and field definitions.
+  \Drupal::service('entity.definition_update_manager')->applyUpdates();
+
+  // Allow visitor account creation with administrative approval.
+  $user_settings = \Drupal::config('user.settings');
+  $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save();
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array());
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array());
+
+  // Enable all permissions for the administrator role.
+  user_role_grant_permissions('administrator', array_keys(\Drupal::service('user.permissions')->getPermissions()));
+  // Set this as the administrator role.
+  $user_settings->set('admin_role', 'administrator')->save();
+
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+}
