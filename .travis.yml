@@ -21,10 +21,14 @@ install:
 - composer global require drush/drush:dev-master
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 - git clone --branch 8.x-1.x http://git.drupal.org/project/composer.git ~/.drush/composer
+- cd ..
 - drush make --concurrency=5 drupal-org-core.make drupal -y
+- mkdir drupal/profiles/quartz
+- cp -R quartz/* drupal/profiles/quartz/.
 - cd drupal
-- drush si quartz --db-url=mysql://root:@localhost/drupal -y 
+- drush make --concurrency=5 profiles/quartz/drupal-org.make --no-core --contrib-destination=profiles/quartz -y
 before_script:
+- drush si quartz --db-url=mysql://root:@localhost/drupal -y 
 - drush cache-rebuild
 - drush runserver --server=builtin 8080 &
 - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do sleep 0.2; done
