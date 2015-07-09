@@ -17,7 +17,7 @@ before_install:
 - echo 'max_execution_time = 120' >> drupal.php.ini;
 - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
 - phpenv config-add drupal.php.ini
-- phpenv rehashi
+- phpenv rehash
 - composer global require drush/drush:dev-master
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 install:
