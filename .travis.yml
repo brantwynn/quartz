@@ -11,7 +11,7 @@ mysql:
 before_install:
 - sudo apt-get update > /dev/null
 - composer self-update
-- composer version
+- composer --version
 - mysql -e 'SET GLOBAL wait_timeout = 5400;'
 - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 - echo 'max_execution_time = 120' >> drupal.php.ini;
