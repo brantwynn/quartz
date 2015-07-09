@@ -37,31 +37,17 @@ function quartz_install() {
   $user->roles[] = 'administrator';
   $user->save();
 
-  // Enable the Contact link in the footer menu.
-  /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  $menu_link_manager->updateDefinition('contact.site_page', array('enabled' => 1));
-
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access site-wide contact form'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access site-wide contact form'));
 
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access shortcuts'));
 
-  // Populate the default shortcut set.
-  $shortcut = entity_create('shortcut', array(
-    'shortcut_set' => 'default',
-    'title' => t('Add content'),
-    'weight' => -20,
-    'link' => array('uri' => 'internal:/node/add'),
-  ));
-  $shortcut->save();
-
   $shortcut = entity_create('shortcut', array(
     'shortcut_set' => 'default',
     'title' => t('All content'),
     'weight' => -19,
-    'link' => array('uri' => 'internal:/admin/content'),
+    'link' => array('uri' => 'internal:/admin/files'),
   ));
   $shortcut->save();
 
