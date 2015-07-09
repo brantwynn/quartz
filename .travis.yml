@@ -37,7 +37,8 @@ before_script:
 - cd ../../..
 script:
 - cd core
-- ./vendor/phpunit/phpunit/phpunit --verbose
-- ../profiles/quartz/tests/bin/behat
+#- ./vendor/phpunit/phpunit/phpunit --verbose
+- cd ../profiles/quartz/tests
+- bin/behat
 matrix:
   fast_finish: true
