@@ -35,7 +35,7 @@ projects[file_entity][type] = "module"
 projects[file_entity][subdir] = "contrib"
 projects[file_entity][directory_name] = "file_entity"
 projects[file_entity][download][type] = "git"
-projects[file_entity][download][url]= "git@github.com:md-systems/file_entity.git"
+projects[file_entity][download][url]= "https://github.com/md-systems/file_entity.git"
 projects[file_entity][download][branch] = "8.x-2.x"
 
 projects[inline_entity_form][version] = "1.x-dev"
