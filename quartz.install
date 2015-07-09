@@ -22,7 +22,7 @@ function quartz_install() {
   \Drupal::service('entity.definition_update_manager')->applyUpdates();
 
   // Set front page to "files".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/admin/files')->save(TRUE);
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/admin/content/files')->save(TRUE);
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
