@@ -34,9 +34,10 @@ before_script:
 - cd profiles/quartz/tests
 - composer install
 - touch behat.local.yml
+- cd ../../..
 script:
 - cd core
 - ./vendor/phpunit/phpunit/phpunit --verbose
-- bin/behat
+- ../profiles/quartz/tests/bin/behat
 matrix:
   fast_finish: true
