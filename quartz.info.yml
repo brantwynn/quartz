@@ -9,6 +9,7 @@ dependencies:
   - config
   - field_ui
   - file
+  - file_entity
   - help
   - media_entity
   - media_entity_image
