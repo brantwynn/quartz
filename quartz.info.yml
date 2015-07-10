@@ -12,8 +12,11 @@ dependencies:
   - entity_embed
   - file
   - file_entity
+  - fallback_formatter
   - help
   - inline_entity_form
+  - media_entity
+  - media_pinkeye
   - path
   - shortcut
   - toolbar
