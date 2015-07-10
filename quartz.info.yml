@@ -19,6 +19,7 @@ dependencies:
   - media_pinkeye
   - path
   - shortcut
+  - taxonomy
   - toolbar
   - user
   - views
