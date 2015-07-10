@@ -16,7 +16,6 @@ dependencies:
   - taxonomy
   - toolbar
   - user
-  - uuid
   - views
 themes:
   - classy
