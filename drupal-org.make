@@ -42,6 +42,7 @@ projects[fallback_formatter][version] = "1.x-dev"
 projects[fallback_formatter][version] = "module"
 projects[fallback_formatter][version] = "contrib"
 projects[fallback_formatter][download][type] = "git"
+projects[fallback_formatter][download][url]= "https://github.com/drupal-media/fallback_formatter.git"
 projects[fallback_formatter][download][branch] = "8.x-1.x"
 
 projects[inline_entity_form][version] = "1.x-dev"
