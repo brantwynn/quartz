@@ -9,18 +9,19 @@ dependencies:
   - crop
   - field_ui
   - entity_browser
+  - entity_reference
   - entity_embed
   - file
   - file_entity
   - fallback_formatter
   - help
   - inline_entity_form
-  - media_entity
   - media_pinkeye
   - path
   - shortcut
   - toolbar
   - user
+  - views
 themes:
   - classy
   - seven
