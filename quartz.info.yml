@@ -11,9 +11,6 @@ dependencies:
   - file
   - file_entity
   - help
-  - media_entity
-  - media_entity_image
-  - media_entity_crop
   - path
   - shortcut
   - taxonomy
