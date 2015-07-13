@@ -99,4 +99,8 @@ projects[media_pinkeye][subdir] = "contrib"
 projects[media_pinkeye][download][type] = "git"
 projects[media_pinkeye][download][branch] = "8.x-1.x"
 
-
+projects[url_embed][version] = "1.x-dev"
+projects[url_embed][type] = "module"
+projects[url_embed][subdir] = "contrib"
+projects[url_embed][download][type] = "git"
+projects[url_embed][download][branch] = "8.x-1.x"
