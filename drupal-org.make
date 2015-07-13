@@ -30,6 +30,12 @@ projects[entity_embed][subdir] = "contrib"
 projects[entity_embed][download][type] = "git"
 projects[entity_embed][download][branch] = "8.x-1.x"
 
+projects[embed][version] = "1.x-dev"
+projects[embed][type] = "module"
+projects[embed][subdir] = "contrib"
+projects[embed][download][type] = "git"
+projects[embed][download][branch] = "8.x-1.x"
+
 projects[file_entity][version] = "2.x-dev"
 projects[file_entity][type] = "module"
 projects[file_entity][subdir] = "contrib"
