@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Install function for quartz_rest.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ */
+function quartz_rest_install() {
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:node'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:file'));
+}
+

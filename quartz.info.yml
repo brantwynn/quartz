@@ -11,9 +11,9 @@ dependencies:
   - file
   - file_entity
   - help
-  - entity_browser_entity_form
-  - media_pinkeye
   - path
+  - quartz_browser
+  - quartz_rest
   - shortcut
   - taxonomy
   - toolbar
