@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.media_node.field_media
     - node.type.media_node
   module:
-    - inline_entity_form
+    - entity_browser
     - path
     - text
 id: node.media_node.default
@@ -31,14 +31,11 @@ content:
   field_media:
     weight: 32
     settings:
-      allow_existing: true
-      match_operator: CONTAINS
-      delete_references: false
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      entity_browser: test_files
+      field_widget_display: label
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_multiple
+    type: entity_browser_entity_reference
   path:
     type: path
     weight: 30

@@ -18,14 +18,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:file'
   handler_settings:
     target_bundles:
+      audio: audio
+      document: document
       image: image
-      instagram: instagram
-      slideshow: slideshow
-      tweet: tweet
+      video: video
     sort:
-      field: vid
-      direction: ASC
+      field: _none
 field_type: entity_reference
