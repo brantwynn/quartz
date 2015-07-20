@@ -29,8 +29,7 @@ install:
 - drush make --concurrency=5 profiles/quartz/drupal-org.make --no-core --contrib-destination=profiles/quartz -y
 - drush si quartz --db-url=mysql://root:@localhost/drupal -y
 before_script:
-- drush runserver :8080 &
-- until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do sleep 0.2; done
+- drush runserver :8080 &>/dev/null &
 - cd profiles/quartz/tests
 - composer install
 - touch behat.local.yml
