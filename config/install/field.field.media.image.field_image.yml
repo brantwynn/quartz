@@ -1,0 +1,28 @@
+uuid: b6f9f77f-e37c-4b61-9600-aae5e24153b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image
+    - media_entity.bundle.image
+  module:
+    - file
+id: media.image.field_image
+field_name: field_image
+entity_type: media
+bundle: image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'jpg png gif'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: file
+
