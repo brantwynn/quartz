@@ -18,6 +18,7 @@ dependencies:
   - shortcut
   - taxonomy
   - toolbar
+  - token
   - user
   - views_ui
 themes:

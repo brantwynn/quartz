@@ -100,6 +100,12 @@ projects[media_pinkeye][subdir] = "contrib"
 projects[media_pinkeye][download][type] = "git"
 projects[media_pinkeye][download][branch] = "8.x-1.x"
 
+projects[token][version] = "1.x-dev"
+projects[token][type] = "module"
+projects[token][subdir] = "contrib"
+projects[token][download][type] = "git"
+projects[token][download][branch] = "8.x-1.x"
+
 projects[url_embed][version] = "1.x-dev"
 projects[url_embed][type] = "module"
 projects[url_embed][subdir] = "contrib"
