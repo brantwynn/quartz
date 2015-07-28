@@ -11,7 +11,7 @@ dependencies:
   - file
   - file_entity
   - help
-  - media_entity
+  - media_pinkeye
   - path
   - quartz_browser
   - quartz_rest

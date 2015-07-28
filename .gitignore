@@ -1,1 +1,17 @@
-modules/contrib*
+# Composer
+vendor
+composer.lock
+
+# Behat
+tests/bin
+behat.local.yml
+
+# Contrib
+modules/contrib/*
+themes/contrib/*
+
+# Libraries
+libraries/*
+
+# Vim
+*.swp
