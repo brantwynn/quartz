@@ -11,7 +11,8 @@ use Drupal\user\Entity\User;
  */
 function quartz_rest_install() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:node'));
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:file'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:media'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('restful get entity:node'));
 }
 
