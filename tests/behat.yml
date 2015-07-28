@@ -11,6 +11,7 @@ default:
   extensions:
     Behat\MinkExtension:
       base_url: http://localhost:8080
+      files_path: './profiles/quartz/tests/files'
       goutte: ~
       selenium2: ~
     Drupal\DrupalExtension:
