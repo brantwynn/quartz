@@ -30,10 +30,11 @@ install:
 - drush si quartz --db-url=mysql://root:@localhost/drupal -y
 before_script:
 - drush runserver :8080 &>/dev/null &
+- ls -l
 - cd profiles/quartz/tests
 - composer install
 - touch behat.local.yml
 script:
-- bin/behat -p phantomjs
+- bin/behat
 matrix:
   fast_finish: true
