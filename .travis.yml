@@ -20,6 +20,7 @@ before_install:
 - phpenv rehash
 - composer global require drush/drush:dev-master
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
+- phantomjs --version
 install:
 - cd ..
 - drush make --concurrency=5 quartz/drupal-org-core.make drupal -y
@@ -30,11 +31,10 @@ install:
 - drush si quartz --db-url=mysql://root:@localhost/drupal -y
 before_script:
 - drush runserver :8080 &>/dev/null &
-- ls -l
 - cd profiles/quartz/tests
 - composer install
 - touch behat.local.yml
 script:
-- bin/behat
+- bin/behat -p phantomjs
 matrix:
   fast_finish: true
