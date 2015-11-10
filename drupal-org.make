@@ -36,6 +36,12 @@ projects[embed][subdir] = "contrib"
 projects[embed][download][type] = "git"
 projects[embed][download][branch] = "8.x-1.x"
 
+projects[file_browser][version] = "1.x-dev"
+projects[file_browser][type] = "module"
+projects[file_browser][subdir] = "contrib"
+projects[file_browser][download][type] = "git"
+projects[file_browser][download][branch] = "8.x-1.x"
+
 projects[file_entity][version] = "2.x-dev"
 projects[file_entity][type] = "module"
 projects[file_entity][subdir] = "contrib"
