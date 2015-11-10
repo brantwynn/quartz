@@ -33,10 +33,7 @@ before_script:
 - cd profiles/quartz/tests
 - composer install
 - touch behat.local.yml
-- cd ../../..
 script:
-- cd core
-- cd ../profiles/quartz/tests
 - bin/behat -p phantomjs
 matrix:
   fast_finish: true
