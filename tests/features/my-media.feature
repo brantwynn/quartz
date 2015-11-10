@@ -4,7 +4,7 @@ Feature: My Media page
   As a user
   I need to see a listing of my media
 
-  @api
+  @javascript
   Scenario: View: My Media
     Given I am logged in as a user with the "administrator" role
     When I go to "/media/add/image"

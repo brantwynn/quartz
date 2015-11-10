@@ -36,8 +36,7 @@ before_script:
 - cd ../../..
 script:
 - cd core
-#- ./vendor/phpunit/phpunit/phpunit --verbose
 - cd ../profiles/quartz/tests
-- bin/behat
+- bin/behat -p phantomjs
 matrix:
   fast_finish: true
